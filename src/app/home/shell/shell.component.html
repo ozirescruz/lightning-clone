@@ -1,0 +1,74 @@
+<div class="wrapper">
+  <!-- Sidebar  -->
+  <nav id="sidebar" [class.active]="isCollapseMenu" class="shadow">
+    <div class="sidebar-header text-center">
+      <img src="../../../assets/img/logo.png" alt="" srcset="" />
+      <span>Lightning</span>
+    </div>
+    <ul class="list-unstyled components">
+      <div class="sidebar text-center">
+        <img src="../../../assets/img/user.jpg" class="img-circle" />
+        <h3>John Doe</h3>
+      </div>
+      <li>
+        <a href="#" routerLink="/dashboard" routerLinkActive="active"
+          ><fa-icon [icon]="faTv"></fa-icon><span>Dashboard</span></a
+        >
+      </li>
+      <li>
+        <a href="#" routerLink="/forms" routerLinkActive="active"
+          ><span><fa-icon [icon]="faUser"></fa-icon> Forms</span></a
+        >
+      </li>
+      <li>
+        <a href="#" routerLink="/tables" routerLinkActive="active"
+          ><span><fa-icon [icon]="faTable"></fa-icon>Tables</span></a
+        >
+      </li>
+      <li>
+        <a href="#" routerLink="/typography" routerLinkActive="active"
+          ><span><fa-icon [icon]="faAlignCenter"></fa-icon>Tipography</span></a
+        >
+      </li>
+      <li>
+        <a href="#" routerLink="/maps" routerLinkActive="active"
+          ><span><fa-icon [icon]="faGlobe"></fa-icon>Maps</span></a
+        >
+      </li>
+      <li>
+        <a href="#" routerLink="/notifications" routerLinkActive="active"
+          ><span><fa-icon [icon]="faBell"></fa-icon>Notifications</span></a
+        >
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Page Content  -->
+  <div id="content">
+    <nav class="navbar navbar-dark">
+      <div class="container-fluid">
+        <button
+          type="button"
+          id="sidebarCollapse"
+          class="btn text-sidebar navbar-btn"
+          (click)="collapseMenu()"
+        >
+          <fa-icon [icon]="faBars"></fa-icon>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                ><span style="font-size: 2em;"
+                  ><fa-icon [icon]="faCog"></fa-icon></span
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </div>
+</div>

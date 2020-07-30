@@ -1,0 +1,20 @@
+@import "~../../shared/styles/variables.scss";
+
+.navbar {
+  height: 5rem;
+  background: $primary-color;
+  color: $tertiary-color;
+}
+.navbar a {
+  color: $quinary-color;
+  font-size: 1.5rem;
+}
+
+.navbar-buttons button {
+  color: $navbar-buttons-text-color;
+  background: $navbar-buttons-bg-color;
+  border: none;
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
